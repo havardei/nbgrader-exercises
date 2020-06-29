@@ -34,7 +34,10 @@ jobs:
 
     - shell: bash
       env:
+        HUBURL: ${{ secrets.HUBURL }}
         USERNAME: ${{ secrets.GRADER_NAME }}
+        PASSWORD: ${{ secrets.GRADER_PASSWD }}
       run: |
-        ls
+        pip install -r ./graderbot/requirements.txt,
+        python ./graderbot/main.py $HUBURL $USERNAME PASSWD
 
