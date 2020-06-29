@@ -34,14 +34,13 @@ jobs:
 
     - shell: bash
       run: |
-        pip install -r graderbot/requirements.txt
-
+        pip3 install -r graderbot/requirements.txt
 
     - shell: bash
       env:
         HUBURL: ${{ secrets.HUBURL }}
         USERNAME: ${{ secrets.GRADER_NAME }}
-        PASSWORD: ${{ secrets.GRADER_PASSWD }}
+        PASSWD: ${{ secrets.GRADER_PASSWD }}
       run: |
-        python graderbot/main.py $HUBURL $USERNAME PASSWD
+        python3 graderbot/main.py $HUBURL $USERNAME $PASSWD
 
