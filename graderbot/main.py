@@ -87,7 +87,7 @@ def main():
     structlog.configure(processors=processors)
 
     awaits = []
-    for i in range(args.user_count):
+    for i in range(1):
         awaits.append(simulate_user(
             args.hub_url,
             args.user,
