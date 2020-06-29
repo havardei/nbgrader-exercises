@@ -32,4 +32,9 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
 
+    - shell: bash
+      env:
+        USERNAME: ${{ secrets.GRADER_NAME }}
+      run: |
+        echo "$USERNAME"
 
