@@ -36,5 +36,5 @@ jobs:
       env:
         USERNAME: ${{ secrets.GRADER_NAME }}
       run: |
-        echo "$USERNAME"
+        ls
 
