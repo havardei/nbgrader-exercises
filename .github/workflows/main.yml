@@ -38,7 +38,6 @@ jobs:
         USERNAME: ${{ secrets.GRADER_NAME }}
         PASSWORD: ${{ secrets.GRADER_PASSWD }}
       run: |
-        pwd,
-        pip install -r ./graderbot/requirements.txt,
-        python ./graderbot/main.py $HUBURL $USERNAME PASSWD
+        pip install -r graderbot/requirements.txt,
+        python graderbot/main.py $HUBURL $USERNAME PASSWD
 
