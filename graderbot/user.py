@@ -211,10 +211,10 @@ class User:
                 async for msg_text in ws:
                     msg = msg_text.json()
                     self.log.msg(msg)
-                self.log.msg(
-                    'Code Execute: complete', 
-                    action='code-execute', phase='complete') 
-        #exit()
+                    if 'parent_header' in msg and msg['parent_header'].get('msg_id') == msg_id:
+                        if msg['channel'] == 'shell':
+                            if msg['msg_type'] == 'execute_reply':
+                                exit()
         except Exception as e:
             if type(e) is OperationError:
                 raise
