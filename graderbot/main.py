@@ -40,9 +40,12 @@ def main():
         help='Hub URL to send traffic to (without a trailing /)'
     )
     argparser.add_argument(
-        'user_count',
-        type=int,
-        help='Number of users to simulate'
+        'user',
+        help='username'
+    )
+    argparser.add_argument(
+        'passwd',
+        help='passwordd'
     )
     argparser.add_argument(
         '--user-prefix',
