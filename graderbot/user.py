@@ -214,7 +214,7 @@ class User:
                 self.log.msg(
                     'Code Execute: complete', 
                     action='code-execute', phase='complete') 
-
+        #exit()
         except Exception as e:
             if type(e) is OperationError:
                 raise
