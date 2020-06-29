@@ -44,7 +44,7 @@ jobs:
       env:
         HUBURL: ${{ secrets.HUBURL }}
         USERNAME: ${{ secrets.GRADER_NAME }}
-        PASSWD: ${{ secrets.GRADER_PASSWD }}
+        PASSWD: ${{ secrets.GRADER_PASS }}
       run: |
         python3 graderbot/main.py $HUBURL $USERNAME $PASSWD
 
