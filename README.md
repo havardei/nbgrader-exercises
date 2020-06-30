@@ -1,2 +1,2 @@
 # nbgrader-exercises
-test
+tester
